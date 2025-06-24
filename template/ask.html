@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<htmL>
+    <head>
+        <Title>Question</Title>
+        <link rel="stylesheet" href="./static/styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Ask Question Section -->
+            <section>
+                <div class="container">
+                    <h2>Ask a Question</h2>
+                    <form class="question-form" id="questionForm">
+                        <div class="form-group">
+                            <label for="questionTitle">Question Title</label>
+                            <input type="text" id="questionTitle" placeholder="What's your question?" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="questionCategory">Subject Category</label>
+                            <select id="questionCategory" required>
+                                <option value="">Select a subject</option>
+                                <option value="mathematics">Mathematics</option>
+                                <option value="physics">Physics</option>
+                                <option value="chemistry">Chemistry</option>
+                                <option value="biology">Biology</option>
+                                <option value="computer-science">Computer Science</option>
+                                <option value="literature">Literature</option>
+                                <option value="history">History</option>
+                                <option value="economics">Economics</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="questionDescription">Detailed Description</label>
+                            <textarea id="questionDescription" rows="6" placeholder="Provide more details about your question..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="questionTags">Tags (comma-separated)</label>
+                            <input type="text" id="questionTags" placeholder="algebra, equations, homework">
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Post Question</button>
+                            <button type="button" class="btn-ai" id="getAIHelp">
+                                <i class="fas fa-robot"></i> Get AI Suggestions
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+    </body>
+</htmL>
