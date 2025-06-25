@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sign Up</title>
-  <link rel="stylesheet" href="./static/styles.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-    body { font-family: Arial; display: flex; justify-content: center; align-items: center; height: 100vh; }
-    .form { width: 500px; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
-    input { width: 100%; margin: 10px 0; padding: 10px; }
-    button { padding: 10px; width: 100%; }
-  </style>
-    </head>
-<body>
+  <link rel="stylesheet" href="./static/styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body class="sign">
+  <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="./index.html" class="nav-link">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>EduConnect</span>
+                    </a>
+                </div>
+                <div class="nav-actions">
+                    <a href="./login.html"><button class="btn-secondary" id="loginBtn">Login</button></a>
+                    <a href="./Sign Up.html"><button class="btn-primary" id="signupBtn">Sign Up</button></a>
+                </div>
+            </div>
+        </nav>
   <div class="form">
     <h2>Sign Up</h2>
     <input type="email" id="email" placeholder="Email" />
@@ -22,7 +34,7 @@
 
   <script type="module">
     import {auth} from './script'
-import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+    import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
     reateUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log("User signed up:", userCredential.user);
